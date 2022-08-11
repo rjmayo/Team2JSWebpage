@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lamp</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Figtree:wght@700&display=swap');
+      body {
+        font-family: 'Figtree', sans-serif;
+        color: #333333;
+        transition: background 0.2s linear;
+      }
+
+      body.darkmode {
+        background-color: #292c35;
+        color: whitesmoke;
+      }
+
+      .title {
+        float: left;
+        padding: 120px;
+        font-size: 150px;
+      }
+
+      .table {
+        background-color: burlywood;
+        width: 400px;
+        height: 20px;
+        position: absolute;
+        border-radius: 10px 10px 10px 10px;
+        bottom: 200px;
+        left: 40%;
+      }
+
+      .shell {
+        background-color: #555555;
+        width: 150px;
+        height: 100px;
+        position: absolute;
+        z-index: 1;
+        border-radius: 300px 300px 25px 25px;
+        bottom: 500px;
+        left: 50%;
+        transform: rotate(-60deg)
+      }
+
+      .bulb {
+        background-color: white;
+        width: 125px;
+        height: 80px;
+        position: absolute;
+        border-radius: 55px 55px 15px 15px;
+        bottom: 485px;
+        left: 53%;
+        opacity: 10%;
+        transform: rotate(120deg)
+      }
+
+      #light {
+        position: absolute;
+        height: 245px;
+        width: 320px;
+        bottom: 350px;
+        left: 55%;
+        background: linear-gradient(90deg, #fdfd96, rgba(0, 0, 0, 0));
+        clip-path:polygon(0 78%, 0 37%, 100% 0, 100% 100%);
+        opacity: 100%;
+        backdrop-filter:blur(10px);
+        transform: rotate(28deg)
+      }
+
+      .stand1 {
+        background-color: #777777;
+        width: 25px;
+        height: 300px;
+        position: absolute;
+        border-radius: 10px 10px 10px 10px;
+        bottom: 250px;
+        left: 48%;
+      }
+
+      .stand2 {
+        background-color: #777777;
+        width: 25px;
+        height: 90px;
+        position: absolute;
+        border-radius: 10px 10px 10px 10px;
+        bottom: 509px;
+        left: 924px;
+        transform: rotate(70deg);
+      }
+
+      .base {
+        background-color: #333333;
+        width: 200px;
+        height: 30px;
+        position: absolute;
+        border-radius: 80px 80px 0px 0px;
+        bottom: 230px;
+        left: 44%;
+      }
+
+      #button {
+        position: absolute;
+        background-color: lightgrey;
+        width: 20px;
+        height: 15px;
+        border-radius: 20px 20px 10px 10px;
+        bottom: 250px;
+        left: 51%;
+        cursor: pointer;
+      }
+
+      .label {
+        background-color: #777777;
+        position: absolute;
+        bottom: 740px;
+        left: 600px;
+        border-radius: 50px;
+        height: 40px;
+        width: 20px;
+      }
+
+      .ball {
+        background-color: whitesmoke;s
+        width: 15px;
+        height: 15px;
+        border-radius: 20px;
+        transition: transform 0.1s linear;
+      }
+
+      .checkbox {
+        opacity: 0%;
+        position: absolute;
+      }
+
+      .checkbox:checked + .label .ball {
+        transform: translateY(25px);
+      }
+
+      .nightmode {
+        color: #292c35;
+        position: absolute;
+        left: 590px;
+        top: 270px;
+      }
+
+      .lightmode {
+        color: white;
+        position: absolute;
+        left: 590px;
+        top: 185px;
+      }
+
+      .clickme {
+        position: absolute;
+        right: 860px;
+        bottom: 255px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="title">
+      <p>Lamp</p>
+    </div>
+    <div class="nightmode">
+      <p>Dark</p>
+    </div>
+    <div class="lightmode">
+      <p>Light</p>
+    </div>
+    <div class="clickme">
+      <p>Click Me!</p>
+    </div>
+
+    <div class="toggle">
+      <input type="checkbox"
+      class="checkbox" id="checkbox">
+      <label for="checkbox" class="label">
+        <i class="fas fa-off"></i>
+        <i class="fas fa-on"></i>
+        <div class="ball"></div>
+      </label>
+    </div>
+
+    <div class ="main">
+      <div class="lamp">
+        <div class="bulb"></div>
+        <div id="light"></div>
+        <div class="shell"></div>
+        <div class="stand1"></div>
+        <div class="stand2"></div>
+        <div class="base"></div>
+      </div>
+      <div id="button"></div>
+      <div class="table"></div>
+    </div>
+    <script>
+      const checkbox = document.getElementById('checkbox');
+
+      const button = document.getElementById('button');
+
+      let light = document.getElementById('light');
+
+      let index = 0;
+
+      const brightness = ['0', '100'];
+
+      checkbox.addEventListener('change', () => {
+        document.body.classList.toggle('darkmode');
+      });
+
+      button.addEventListener('click', function onClick() {
+        light.style.opacity = brightness[index];
+
+        index = index >= brightness.length - 1 ? 0 : index + 1;
+      });
+    </script>
+  </body>
+</html>
