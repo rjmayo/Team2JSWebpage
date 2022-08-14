@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+<html>
+    
+    <!-- This is the title -->
+    <head>
+        <!-- This gets the font type -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        <title> Practice HTML & CSS Page </title>
+        <!-- This puts the font at the first heading -->
+        <!-- If the 'div' sentence is hovered over, the text will show as a salmon color -->
+        <!-- JS Update: Added a section to define th and td borders. -->
+        <style type="text/css">
+            h1 {
+                font-family: "Sofia", sans-serif;
+
+            }
+
+            a {
+                font-weight: bold;
+            }
+
+            #trythis {
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 1.2em;
+                color: powderblue;
+                font-weight: bold;
+
+            }
+
+            div:hover {
+                color: salmon;
+            }
+
+            
+            th, td {
+                border: 1px solid;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- This is a Navbar -->
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <!-- Brand/logo -->
+            <a class="navbar-brand" href="#">A Logo Would Be Here</a>
+
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="https://www.artstation.com/artwork/nLY0K">Fenske's Art</a>
+                </li>
+              </ul>
+        </nav>
+
+        <h1> This Is A Heading </h1>
+            <p> This is a paragraph. </p>
+            <div> This is a div. </div>
+            <p> This is a <span id="trythis">blue</span> word. </p>
+            <!-- This is a line break -->
+            <br>
+            <ul>
+                <li> This is a list. </li>
+                <li> This is a <strong> word </strong>. </li>
+                <li> This is an <em> emphasized/italicized </em> word. </li>
+            </ul>
+
+            <ol>
+                <li> This is an ordered list. </li>
+                <li> If you add start at the beginning, you can choose which number to start from. </li>
+            </ol>
+
+            <!-- This is a button from Bootstrap -->
+            <!-- It leads to the website of the Untitled Goose Game -->
+            <!-- It would be fun to make a 'honk' noise here in the future when the button is pressed -->
+            <a href="https://goose.game/" class="btn btn-danger" role="button">Peace Was Never An Option</a>
+
+            <br>
+            <br>
+            <!-- This is a Flex box -->
+            <!-- They are forced into equal widths using flex-fill -->
+            <div class="d-flex">
+                <div class="p-2 bg-info flex-fill">This is</div>
+                <div class="p-2 bg-warning flex-fill">a</div>
+                <div class="p-2 bg-info flex-fill">Flex Box</div>
+              </div>
+            
+            <!-- This was added to switch more to a CSS style -->
+            <table style="width: 90%; border: 2px solid;"><!--Mark's comment 8/2: I think you need to also say solid for the border to appear. "border: 2px solid" Also, I think you need to put the style into the th and td elements for borders to appear around the cells and not just around the whole table.-->
+                <tr>
+                    <th> Table </th>
+                    <th> Header </th>
+                </tr>
+                <tr>
+                    <td> Cell </td>
+                    <td> Block </td>
+                </tr>
+            </table>
+            <p> It lacks the borders and lines, but that can be changed later. </p>
+
+            <hr>
+
+            <img src="https://cdnb.artstation.com/p/assets/images/images/004/811/399/large/jeremy-fenske-link-foresttemple.jpg?1486453970" alt="Link and the Forest Temple" title="Link and the Temple Forest by Jeremy Fenske">
+            <p> Image is by Jeremy Fenske. <a href= "https://www.artstation.com/artwork/nLY0K"> Here is a link to Fenske's artwork. </a></p>
+
+            <button onclick="honk()">honk?</button>
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+        <!-- JS Update: Added variables here, using const so the first two variables can't be changed -->
+        <!-- JS Update: Added an array filled with various kinds of tea (I was making tea at the moment)-->
+        <!-- JS Update: Added function; the body could've been kept in one line but I was hoping to practice Javascript a bit more -->
+        <!-- JS Update: Added an if-else statement that gives an alert with a message that depends on the current time -->
+        <!-- JS Update: Added a honk button that alerts the user they've been honked at, would be inspired to add a honk sound effect in the future -->
+        <script>
+            const firstVariable = 25;
+            const secondVariable = 50;
+
+            let teas = [
+                "Oolong",
+                "Pu-erh",
+                "Jasmine",
+                "Earl Grey",
+                "Chrysanthemum",
+                "Barley",
+            ]
+
+            let text = "";
+            for (let i = 0; i < teas.length; i++) {
+                text += teas[i] + " Tea <br>";
+            }
+
+            function addVariables(v1, v2) {
+                let total = firstVariable + secondVariable;
+                return total;
+            }
+
+            function honk() {
+                alert("You've been honked at!");
+            }
+
+            let currentDate = new Date();
+            let hourTime = currentDate.getHours();
+            if (hourTime < 12) {
+                alert("Good morning!");
+            }
+            else if (hourTime < 18) {
+                alert("Good afternoon!");
+            }
+            else {
+                alert("Good evening!");
+            }
+
+            
+        </script>
+    </body>
+
+</html>
