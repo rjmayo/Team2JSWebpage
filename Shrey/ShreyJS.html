@@ -15,10 +15,16 @@
     }
 
     p {
-      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
     }
-    ul{
+
+    ul {
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    h2 {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      color: rgb(127, 129, 255);
     }
   </style>
 </head>
@@ -38,8 +44,23 @@
     <li>Make A Loop</li>
     <li>Make An Element Change When Clicked</li>
   </ul>
+  <h2>JavaScript Variables</h2>
+
+  <p>In this example, x, y, and z are variables. x+y=z </p>
+
+
+  <p id="demo"></p>
+
+  <script>
+    var x = 5;
+    var y = 5;
+    var z = x + y;
+    document.getElementById("demo").innerHTML =
+      "The value of z is: " + z;
+  </script>
+
   <button onclick="changePara()">Click Here</button>
-  <p id="houdini">This paragraph is supposed to appear and disapear</p>
+  <p id="houdini">If you click me I vanish..</p>
 
   <script>
     let catName = "Houdini";
