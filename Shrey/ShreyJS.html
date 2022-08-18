@@ -26,8 +26,6 @@
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       color: rgb(127, 129, 255);
     }
-    
-  
   </style>
 </head>
 
@@ -47,11 +45,11 @@
     <li>Make A Loop</li>
     <li>Make An Element Change When Clicked</li>
   </ul>
-  <section>
+
   <h2>JavaScript Variables</h2>
   <!--Variables-->
- 
-  <p>In this example, x, y, and z are variables. x+y=z </p>
+
+  <p><strong>In this example, x, y, and z are variables.</strong> x+y=z </p>
 
 
   <p id="xyz"></p>
@@ -61,43 +59,52 @@
     var y = 5;
     var z = x + y;
     document.getElementById("xyz").innerHTML =
-      "The value of z is: " + z;
+      "The value of z is: 10";
   </script>
+  <p>The value of y=5</p>
   <p>What is the value of x?</p>
 
-  <input type="button" id="myBtn" onclick="myFunction()" value="x=">
+  <input type="button" id="x" onclick="myFunction(1)" value="x=">
 
   <p id="5"></p>
 
   <script>
     function myFunction() {
-      var x = document.getElementById("myBtn").value;
+      var x = document.getElementById("x").value;
       document.getElementById("5").innerHTML = 5;
     }
   </script>
-  </section>
+
+  <!--Arrays-->
   <section>
-  <h2 style="color: red;">JavaScript Arrays</h2>
-  <p id="array1"></p>
-<p>This array will give me a </p>
-  <script>
-  const cars = ["Saab", "Volvo", "BMW"];
-  document.getElementById("array1").innerHTML = cars;
-  </script>
-  
+    <h2 style="color: red;">JavaScript Arrays</h2>
+    <p><strong>This array will give a list of the days of the week..</strong> </p>
+    <p style="color: brown;" id="DOW">Click For Days In Order:</p>
 
-</section>
-<section>
-  <button onclick="changePara()">Click Here</button>
-  <p id="houdini">If you click me I vanish..</p>
+    <script>
+      document.getElementById("DOW").addEventListener("click", myFunction);
 
-  <script>
-    let catName = "Houdini";
-    function changePara() {
-      document.getElementById("houdini").innerHTML = " I am " + catName;
-      document.getElementById("houdini").style.color = "orange";
-    }
-  </script>
+      function myFunction() {
+        document.getElementById("DOW").innerHTML = days;
+      }
+    </script>
+    <script>
+      const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+      document.getElementById("array1").innerHTML = days;
+    </script>
+
+
+
+    <button onclick="changePara()">Click Here</button>
+    <p id="houdini">If you click me I vanish..</p>
+
+    <script>
+      let catName = "Houdini";
+      function changePara() {
+        document.getElementById("houdini").innerHTML = " I am " + catName;
+        document.getElementById("houdini").style.color = "orange";
+      }
+    </script>
   </section>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
