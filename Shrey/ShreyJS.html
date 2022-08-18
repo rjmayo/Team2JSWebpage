@@ -45,9 +45,8 @@
     <li>Make A Loop</li>
     <li>Make An Element Change When Clicked</li>
   </ul>
-
-  <h2>JavaScript Variables</h2>
   <!--Variables-->
+  <h2>JavaScript Variables</h2>
 
   <p><strong>In this example, x, y, and z are variables.</strong> x+y=z </p>
 
@@ -64,7 +63,7 @@
   <p>The value of y=5</p>
   <p>What is the value of x?</p>
 
-  <input type="button" id="x" onclick="myFunction(1)" value="x=">
+  <input type="button" id="x" onclick="myFunction(x)" value="x=">
 
   <p id="5"></p>
 
@@ -76,10 +75,14 @@
   </script>
 
   <!--Arrays-->
-  <section>
+  
     <h2 style="color: red;">JavaScript Arrays</h2>
     <p><strong>This array will give a list of the days of the week..</strong> </p>
     <p style="color: brown;" id="DOW">Click For Days In Order:</p>
+    <script>
+      const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+      document.getElementById("array1").innerHTML = days;
+    </script>
 
     <script>
       document.getElementById("DOW").addEventListener("click", myFunction);
@@ -88,10 +91,7 @@
         document.getElementById("DOW").innerHTML = days;
       }
     </script>
-    <script>
-      const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
-      document.getElementById("array1").innerHTML = days;
-    </script>
+
 
 
 
