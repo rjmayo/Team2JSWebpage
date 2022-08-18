@@ -24,8 +24,11 @@
 
     h2 {
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-      color: rgb(127, 129, 255);
     }
+    mark {
+  background-color: yellow;
+  color: black;
+}
   </style>
 </head>
 
@@ -48,7 +51,7 @@
   <!--Variables-->
   <h2>JavaScript Variables</h2>
 
-  <p><strong>In this example, x, y, and z are variables.</strong> x+y=z </p>
+  <p><strong>In this example, x, y, and z are <mark>variables</mark></strong> x+y=z </p>
 
 
   <p id="xyz"></p>
@@ -80,35 +83,49 @@
 
   <!--Arrays-->
 
-    <h2 style="color: red;">JavaScript Arrays</h2>
-    <p><strong>This array will give a list of the days of the week..</strong> </p>
-    <p style="color: brown;" id="DOW">Click For Days In Order:</p>
-    <script>
-      const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
-      document.getElementById("array1").innerHTML = days;
-    </script>
+  <h2 style="color: red;">JavaScript Arrays</h2>
+  <p><strong>This <mark>array</mark> will give a list of the days of the week..</strong> </p>
+  <p style="color: brown;" id="DOW">Click For Days In Order:</p>
+  <script>
+    const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+    document.getElementById("array1").innerHTML = days;
+  </script>
 
-    <script>
-      document.getElementById("DOW").addEventListener("click", myFunction);
+  <script>
+    document.getElementById("DOW").addEventListener("click", myFunction);
 
-      function myFunction() {
-        document.getElementById("DOW").innerHTML = days;
-      }
-    </script>
+    function myFunction() {
+      document.getElementById("DOW").innerHTML = days;
+    }
+  </script>
+
+<h2 style="color: green;">JavaScript Functions</h2>
+
+<p><strong>This <mark>function</mark> does a calculation and returns the result..</strong></p>
+<p style="color: green;">Below I am going to multiply 5*5</p>
+<p id="func"></p>
+
+<script>
+var x = ZFunction(5, 5);
+document.getElementById("func").innerHTML = x;
+
+function ZFunction(a, b) {
+  return a * b; 
+}
+</script>
 
 
+  <!--Extra-->
+  <button onclick="changePara()">Click Here</button>
+  <p id="houdini">If you click me I vanish..</p>
 
-<!--Extra-->
-    <button onclick="changePara()">Click Here</button>
-    <p id="houdini">If you click me I vanish..</p>
-
-    <script>
-      let catName = "Houdini";
-      function changePara() {
-        document.getElementById("houdini").innerHTML = " I am " + catName;
-        document.getElementById("houdini").style.color = "orange";
-      }
-    </script>
+  <script>
+    let catName = "Houdini";
+    function changePara() {
+      document.getElementById("houdini").innerHTML = " I am " + catName;
+      document.getElementById("houdini").style.color = "orange";
+    }
+  </script>
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
