@@ -17,7 +17,8 @@
     header {
       font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     }
-    h1{
+
+    h1 {
       font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     }
 
@@ -46,7 +47,7 @@
 
   <div class="container-fluid p-5 bg-black text-white text-center">
     <h1>Shrey's JavaScript</h1>
-    <p style="color: blanchedalmond;">Where Shrey Learns JavaScript Basics</p> 
+    <p style="color: blanchedalmond;">Where Shrey Learns JavaScript Basics</p>
   </div>
 
   <h5 style=" text-decoration-line: overline;
@@ -86,11 +87,11 @@
 
 
 
-  <input type="button" id="x" onclick="Ffunction(x)" value="x=">
+<input style="display: inline;" type="button" id="x" onclick="Ffunction(x)" value="x=">
 
 
 
-  <p id="5"></p>
+  <p style="display: inline;" id="5"></p>
 
   <script>
     function Ffunction() {
@@ -131,6 +132,27 @@
       return a * b;
     }
   </script>
+
+  <h2 style="color: hotpink;">JavaScript If-Then/ Switch</h2>
+  <p><strong>This is a time-based greeting that works as an <mark>If-Else</mark>condition..</strong></p>
+  <p style="color: hotpink;">Below if the hour is less than 15, you will receive a "Good day" greeting, otherwise you will see "Good evening"
+  </p>
+  <p id="if-else"></p>
+
+  <script>
+    const hour = new Date().getHours();
+    let greeting;
+
+    if (hour < 15) {
+      greeting = "Good day";
+    } else {
+      greeting = "Good evening";
+    }
+
+    document.getElementById("if-else").innerHTML = greeting;
+  </script>
+
+<h2 style="color: orange;">JavaScript Loop</h2>
 
 
   <!--Extra Fun-->
