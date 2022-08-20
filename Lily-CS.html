@@ -227,32 +227,32 @@
 
    <!--Java Script -->
    <script>
-      const imgArray = ["Images/happy.png","Images/hungry.png","Images/party.png","Images/star.png","Images/wow.png"];
+    const imgArray = ["Images/happy.png","Images/hungry.png","Images/party.png","Images/star.png","Images/wow.png"];
 
-       var index = 0;
+var index = 0;
 
-      function makeImage() {
-       var img = document.createElement('img')
-      img.src = imgArray[index];
-      document.getElementById('content').appendChild(img);
-      }
+function makeImage() {
+var img = document.createElement('img')
+img.src = imgArray[index];
+document.getElementById('content').appendChild(img);
+}
 
-     function changeEmoji(){
-      var img = document.getElementById('content').getElementsByTagName('img')[0]
-     index++;
-     index = index % imgArray.length;
-      img.src = imgArray[index];
+function changeEmoji(){
+var img = document.getElementById('content').getElementsByTagName('img')[0]
+index++;
+index = index % imgArray.length;
+img.src = imgArray[index];
 
-      for(let i = 0; i < imgArray.length; i++){
-        /*if(){
+for(let i = 0; i < imgArray.length; i++){
+/*if(){
 
-        }
-        */
-      }
-      }
+}
+*/
+}
+    }
 
 
-   </script>
+ </script>
 
 
 
