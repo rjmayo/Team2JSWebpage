@@ -219,16 +219,42 @@
             </b>
         </li>
     </ol>
-    <h4>Note: For more information visit</h4>
 
-<!-- Link to a website -->
-    <a href=https://medium.datadriveninvestor.com/a-back-end-view-of-front-end-web-design-fb89a0a220ae><em>Front End and Back End Development</em></a><!--Mark's comment 7/17: attribute values should be in doublequotes. (The three big error messages could've been checked by looking at Problems in the debug panel before submitting.)-->
-
-  </body>
+    <body onload="makeImage();">
+      <div class="contents" id="content"></div>
+      <button onclick="changeEmoji()">Click to change the emoji.</button>
+   </body>
 
    <!--Java Script -->
    <script>
-    const emoji = [];
+      const imgArray = ["Images/happy.png","Images/hungry.png","Images/party.png","Images/star.png","Images/wow.png"];
+
+       var index = 0;
+
+      function makeImage() {
+       var img = document.createElement('img')
+      img.src = imgArray[index];
+      document.getElementById('content').appendChild(img);
+      }
+
+     function changeEmoji(){
+      var img = document.getElementById('content').getElementsByTagName('img')[0]
+     index++;
+     index = index % imgArray.length;
+      img.src = imgArray[index];
+
+      for(let i = 0; i < imgArray.length; i++){
+        /*if(){
+
+        }
+        */
+      }
+      }
+
 
    </script>
+
+
+
+  </body>
 </html>
