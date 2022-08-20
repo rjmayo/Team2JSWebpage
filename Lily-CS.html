@@ -6,8 +6,8 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 
-      </head>
-        <link rel="stylesheet" href="styles.css"><!--Mark's comment 7/17: this file doesn't appear to exist.-->
+      </head><!--Mark's comment 8/20: you have an extra /head here.-->
+        <link rel="stylesheet" href="styles.css">
             <title> Quick guide for a future front end developer </title>
             <style type="text/css">
 
@@ -74,11 +74,7 @@
                     height: 350px;
                 }
 
-
-
-
             </style>
-
 
         </head>
 <body>
@@ -128,12 +124,12 @@
         <p>
             A front end developer is in charge of creating a efficient graphical user interface.
             <br>
-            Probably you have run into <strong> facebook </strong> or <strong> instagram </strong>. Do you notice the design of the we application
-            well, a front end Dev is in charge of coding that design.
-        </p>
+            Probably you have run into <strong> facebook </strong> or <strong> instagram </strong>. Do you notice the design of the web application?
+            Well, a front end Dev is in charge of coding that design.
+        </p><!--Mark's comment 8/20: has nothing to do with coding, but I fixed your typos.-->
 
         <p class="sharedHeader">
-            <strong style="font-size:140%;"><em>Basic skills needed</em></span> </strong><!--Mark's comment 7/17: missing an opening <span>-->
+            <strong style="font-size:140%;"><em>Basic skills needed</em></span> </strong><!--Mark's comment 8/20: The extra /span is still here. Mark's comment 7/17: missing an opening <span>-->
         </p>
 
 <!-- Bootstrap Card groups -->
@@ -224,6 +220,7 @@
       <div class="contents" id="content"></div>
       <button onclick="changeEmoji()">Click to change the emoji.</button>
    </body>
+   <!--Mark's comment 8/20: Each page should only have one body element and that contains all other things that are displayed on the page. Move the onload event to the first body element you have on line 80 then delete lines 219 and 222.-->
 
    <!--Java Script -->
    <script>
@@ -232,13 +229,13 @@
 var index = 0;
 
 function makeImage() {
-var img = document.createElement('img')
+var img = document.createElement('img') /*Mark's comment 8/20: don't forget the semicolon*/
 img.src = imgArray[index];
 document.getElementById('content').appendChild(img);
 }
 
 function changeEmoji(){
-var img = document.getElementById('content').getElementsByTagName('img')[0]
+var img = document.getElementById('content').getElementsByTagName('img')[0] /*Mark's comment 8/20: don't forget the semicolon*/
 index++;
 index = index % imgArray.length;
 img.src = imgArray[index];
@@ -249,7 +246,7 @@ for(let i = 0; i < imgArray.length; i++){
 }
 */
 }
-    }
+    } 
 
 
  </script>
