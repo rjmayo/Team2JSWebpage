@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body  {
+  background-image: url("https://img.freepik.com/free-vector/hand-painted-watercolor-floral-wallpaper_52683-67104.jpg?w=2000");
+
+}
+ h1 {text-align: center;} 
+  h2 {text-align: center;} 
+  
+</style>
+</head>
+<body>
+
+ <!--javaScript starts here-->
+  <h1 style="color: red;"> Sharmake's JavaScript</h1>
+<h3 style="color: blue;"> Welcome to my JavaScript!</h3>
+
+<h4 >In this page I'm going to; </h4>
+
+<ol >
+  <li>Declare a variable and set its value.</li>
+  <li>Make An Array</li>
+  <li>Create A Function</li>
+  <li>Create A Loop</li>
+  <li>Make some element execute the function when clicked</li>
+</ol> 
+
+
+
+  <!--Variable-->
+  <h2 style="color: blue;"> Declare a variable and set its value</h2>
+ 
+<p>In this example, x, y, and z are variables. z is x+y </p>
+<p> Both the  values for x and y are 5. We need to add those 2 variables to the get the value for z. </p>
+<p id="demo"></p>
+
+<script>
+var x = 5;
+var y = 5;
+var z = x + y;
+document.getElementById("demo").innerHTML =
+"The value of z is: " + z;
+</script>
+  <!--Array-->
+
+  <h2 style="color: blue;"> Make An Array</h2>
+  <p><strong>This array</mark> By Clicking this array you will be able to see numbers by their order Starting with 1 and ending with 5</strong> </p>
+  <p style="color: brown;" id="DOW"> Click here </p>
+  <script>
+    const days = ["1", "2", "3", "4", "5", ];
+    document.getElementById("array1").innerHTML = numbers;
+  </script>
+
+  <script>
+    document.getElementById("DOW").addEventListener("click", myFunction);
+
+    function myFunction() {
+      document.getElementById("DOW").innerHTML = days;
+    }
+  </script>
+  <!--Function-->
+  <h2 style="color: blue;"> Functions</h2>
+
+  <p><strong>This function does a calculation and returns the result..</strong></p>
+  <p> Below I am going to multiply 50*2</p>
+  <p id="func"></p>
+
+  <script>
+    var x = ZFunction(50, 2);
+    document.getElementById("func").innerHTML = x;
+
+    function ZFunction(a, b) {
+      return a * b;
+    }
+  </script>
+
+<!--LOOP-->
+
+ 
+ 
+
+<h3> make some element execute the function when clicked </h3>
+  <p>Click to display Date and Time.</p>
+ 
+ <button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()">
+Click me to display Date and Time.</button>
+
+<p> id="demo" </p>
+  </script>
+
+<h2>JavaScript For Of Loop</h2>
+<p>The for of statement loops through the values of any iterable object:</p>
+
+<p> id="demo" </p>
+
+<script>
+const cars = ["BMW", "Volvo", "Mini"];
+
+let text = "";
+for (let x of cars) {
+  text += x + "<br>";
+}
+
+document.getElementById("demo").innerHTML = text;
+</script>
+
+
+
+  
+</body>
+
+</html>

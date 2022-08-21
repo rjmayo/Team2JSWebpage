@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+      </head><!--Mark's comment 8/20: you have an extra /head here.-->
+        <link rel="stylesheet" href="styles.css">
+            <title> Quick guide for a future front end developer </title>
+            <style type="text/css">
+
+                body {
+                    background-color: rgb(183, 253, 195);
+                    font-size:200%;
+                    text-align: center;
+                }
+
+                ul, ol, li {
+                   text-align: center;
+                   list-style-position: inside;
+                }
+
+                h4 {
+                    color: rgb(180, 38, 211);
+                }
+
+                h2 {
+                    color:rgba(114, 4, 103, 0.709);
+                    text-align: center;
+                    font-family: 'Times New Roman';
+                    font-size: 230%;
+                }
+
+                p.sharedHeader {
+                    color:blue /*Mark's comment 7/17: don't forget the ending semicolon! */
+                }
+
+                #myHeader {
+                    background-color: rgb(146, 242, 197);
+                    padding: 40px;
+
+                }
+
+                table, th, td {
+                    border:5px solid black;
+                    text-align: center;
+                    width: 50%;
+                    height: 70px;
+                    border-collapse: collapse;
+                }
+
+                table.center {
+                 margin-left: auto;
+                 margin-right: auto;
+                }
+
+                a:hover {
+                    color:rgb(254, 0, 0);
+                }
+
+                .card{
+                    margin-left: 3%;
+                    margin-right: 3%;
+                }
+
+                .card-title{
+                    font-size: 100%;
+                }
+
+                img{
+                    width: 350px;
+                    height: 350px;
+                }
+
+            </style>
+
+        </head>
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="Images/kisspng-computer-icons-web-development-software-developer-5b3bd69a51d6a1.9464300515306482183352.png" alt="" width="20" height="20">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+    <h1 style="text-align:center;"> Computer Science.</h1>
+        <p>I will give you short information about career options</p>
+    <h2 id = "myHeader">Front End Development.</h2>
+        <p>
+            A front end developer is in charge of creating a efficient graphical user interface.
+            <br>
+            Probably you have run into <strong> facebook </strong> or <strong> instagram </strong>. Do you notice the design of the web application?
+            Well, a front end Dev is in charge of coding that design.
+        </p><!--Mark's comment 8/20: has nothing to do with coding, but I fixed your typos.-->
+
+        <p class="sharedHeader">
+            <strong style="font-size:140%;"><em>Basic skills needed</em></span> </strong><!--Mark's comment 8/20: The extra /span is still here. Mark's comment 7/17: missing an opening <span>-->
+        </p>
+
+<!-- Bootstrap Card groups -->
+<div class="card-group">
+    <div class="card">
+      <img src="Images/logo-g66f15778f_640.png" class="card-img-top" alt="..." height="75%" width="10%" object-fit="cover">
+      <div class="card-body">
+        <h5 class="card-title fw-bold">HTML</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </div>
+    </div>
+    <div class="card">
+      <img src="Images/pngkey.com-quality-icon-png-6241203.png" class="card-img-top" alt="..." height="55%" width="10%" object-fit="scale-down cover">
+      <div class="card-body">
+        <h5 class="card-title fw-bold">css</h5>
+        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </div>
+    </div>
+    <div class="card">
+      <img src="Images/pngegg.png" class="card-img-top" alt="..." height="75%" width="20%" object-fit="cover">
+      <div class="card-body">
+        <h5 class="card-title fw-bold">JavaScript</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </div>
+    </div>
+  </div>
+
+
+ <!-- Color highlighting text -->
+    <h2 style="background-color:rgb(146, 242, 197); font-size: 180%;">Job Options</h2>
+
+<!--Table information-->
+    <!-- Where table start -->
+        <table class="center" >
+          <tr>
+            <th>Company Name</th>
+            <th>Potential Salary</th>
+          </tr>
+          <tr>
+            <td><em>Microsoft</em></td>
+            <td>$85,300.00</td>
+          </tr>
+          <tr>
+            <td><em>Oracle</em></td>
+            <td>$90,567.00</td>
+          </tr>
+          <tr>
+            <td><em>Netflix</em></td>
+            <td>$90,435.00</td>
+          </tr>
+        </table>
+    <h4>Note:</h4>
+        <p>Networking is the best strategy for job hunt</p><br>
+    <h3>To expand your network do the following:</h3>
+
+<!-- Numbered list -->
+    <ol style="color: rgb(154, 9, 9)">
+        <!-- 1st element in the list -->
+        <li>
+            <b>
+                <i>Create a LinkedIn account</i>
+            </b>
+        </li>
+        <!-- 2nd element in the list -->
+        <li>
+            <b>
+                <i>Find any friends or classmates and send request on LinkedIn</i>
+            </b>
+        </li>
+        <!-- 3rd element in the list -->
+        <li>
+            <b>
+                <i>If you are in school sign up for internship</i>
+            </b>
+        </li>
+    </ol>
+
+    <body onload="makeImage();">
+      <div class="contents" id="content"></div>
+      <button onclick="changeEmoji()">Click to change the emoji.</button>
+   </body>
+   <!--Mark's comment 8/20: Each page should only have one body element and that contains all other things that are displayed on the page. Move the onload event to the first body element you have on line 80 then delete lines 219 and 222.-->
+
+   <!--Java Script -->
+   <script>
+    const imgArray = ["Images/happy.png","Images/hungry.png","Images/party.png","Images/star.png","Images/wow.png"];
+
+var index = 0;
+
+function makeImage() {
+var img = document.createElement('img') /*Mark's comment 8/20: don't forget the semicolon*/
+img.src = imgArray[index];
+document.getElementById('content').appendChild(img);
+}
+
+function changeEmoji(){
+var img = document.getElementById('content').getElementsByTagName('img')[0] /*Mark's comment 8/20: don't forget the semicolon*/
+index++;
+index = index % imgArray.length;
+img.src = imgArray[index];
+
+for(let i = 0; i < imgArray.length; i++){
+/*if(){
+
+}
+*/
+}
+    } 
+
+
+ </script>
+
+
+
+  </body>
+</html>
